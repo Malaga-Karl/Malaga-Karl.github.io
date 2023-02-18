@@ -1,0 +1,273 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+#name{
+    width: 500px;
+}
+
+#icon{
+    width: 200px;
+}
+
+body{
+    background-color: #C92C6D;
+    background-image: url("assets/Site-Images/noise.png");
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.logo-section {
+    width: 9.4792vw;
+    position: absolute;
+    top: 2vw;
+    right: 10.1vw;
+  }
+  
+.logo-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+header{
+    position: absolute;
+    font-family: JAF-Herb-Condensed;
+    font-size: 3vw;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 5px;
+    text-align: center;
+    right: 28%;
+    top: 20%;
+
+}
+
+.nav-wrap {
+    display: flex;
+    padding: 0 2vw;
+    padding-top: 2vw;
+    font-size: 1.5625vw;
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    background: #C92C6D;
+  }
+  
+  .nav-wrap ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2vw;
+  }
+  
+  .nav-wrap li {
+    line-height: 40.313px;
+  }
+  
+  .nav-wrap li a {
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 300;
+    font-size: 1.68rem;
+    color: white;
+    text-shadow: 0px 2px 1px #000000bd;
+  }
+
+  .nav-wrap li a:hover {
+    text-shadow: none;
+    color: rgb(224, 224, 37);
+    animation: animate-color 0.2s forwards;
+    transition: .5s ease;
+  }
+
+main{
+    position: relative;
+    padding: 50px;
+    margin-top: 120px;
+    /* background-color: rgb(139, 42, 139); */
+    display:flex;
+    text-align: left;
+    justify-content: space-around;
+    gap: 1%;
+}
+
+main img{
+    width: 100%;
+    background-image: url(member-images/background.png);
+    background-size: 500px;
+    background-position: center;
+}
+
+#member2 , #member3{
+    margin-top: 100px;
+}
+
+.card{
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    background: yellow;
+    text-align: left;
+    width: 330px;
+    height: 100%;
+    border: 3pt solid black;
+    border-radius: 5px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.5vw;
+    box-shadow: 5px 10px rgba(35, 31, 31, 0.342);
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+
+.front{
+    backface-visibility: hidden;
+    /* background-image: url(member-images/background.png);
+    filter: opacity(.4); */
+    color: whitesmoke;
+}
+
+@font-face {
+    font-family: JAF-Herb-Condensed;
+    src: url('jaf-herb-condensed-regular.ttf');
+  }
+
+.back{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    backface-visibility: hidden;
+    color: black;
+    transform: rotateY(180deg);
+}
+
+button{
+    width: 11vw;
+    height: 50%;
+    background-color: black;
+    border-radius: 5px;
+    margin-left: 18%;
+    color: white;
+    font-size: 2vw;
+    font-family: JAF-Herb-Condensed;
+    box-shadow: -2px 5px rgb(154, 152, 152);
+}
+
+
+button:hover{
+    cursor: pointer;
+    background-color: #C92C6D;
+    color: #F0EEED;
+    transition: 0.3s ease;
+    border-radius: 3pt black solid;
+}
+
+button:active{
+    scale: 0.8;
+}
+
+section strong{
+    font-family: JAF-Herb-Condensed;
+    font-size: 3vw;
+    margin-left: 25%;
+    text-decoration: underline;
+    letter-spacing: 3px;
+}
+
+#member1 strong{
+    margin-left: 40%;
+}
+
+/* max 1k pixels width */
+
+@media only screen and (max-width: 1000px) {
+    *{
+        margin: 0;
+    }
+    main{
+        flex-wrap:wrap;
+    }
+    #member2 , #member3{
+        margin-top: 3vh;
+    }
+    .card strong{
+        font-size: 4vw;
+    }
+    .card{
+        margin-top: 3vh;
+        font-size: 2.5vw;
+    }
+    button{
+        width: 15vw;
+        height: 70%;
+        background-color: black;
+        border-radius: 5px;
+        margin-left: 18%;
+        color: white;
+        font-size: 3vw;
+        font-family: JAF-Herb-Condensed;
+    }
+    
+}
+
+/* max 783px */
+
+@media only screen and (max-width: 783px){
+    .card{
+        font-size: 3vw;
+    }
+    .card strong{
+        font-size: 5vw;
+    }
+}
+
+/* footer */
+.menu-footer {
+    text-align: center;
+    position: absolute;
+    bottom:0;
+    left: 35vw;
+  }
+  
+  .menu-footer a {
+    color: white;
+  }
+  
+  .menu-footer a:link {
+    text-decoration: none; 
+  }
+  
+  .menu-footer a:visited {
+    text-decoration: none; 
+  }
+  
+  .menu-footer a:hover {
+    text-decoration: underline;
+    color: #efc5df;
+    transition: color 0.2s;
+  }
+  
+  .menu-footer a:active {
+    text-decoration: underline; 
+  }
+  
+  .copyright-links {
+    display: block;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    font-size: 0.8vw;
+    height: 20px;
+    color: white;
+  }
+  
+  @media only screen and (max-width: 1024px) and (orientation: portrait){
+    .menu-footer {
+      margin: auto 5.3vw 0 5.3vw;
+    }
+  
+    .copyright-links {
+      font-size: 4vw;
+    }
+  }

@@ -1,0 +1,440 @@
+/* Basic Reset Style*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, div, img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #CB3A93;
+  background-image: url("assets/Site-Images/noise.png");
+  background-size: contain;
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: JAF-Herb-Condensed;
+  src: url('jaf-herb-condensed-regular.ttf');
+}
+
+/* Navigation Bar CSS */
+.nav-wrap {
+  display: flex;
+  padding: 0 2vw;
+  padding-top: 2vw;
+  font-size: 1.5625vw;
+  box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+  background: #CB3A93;
+}
+
+.nav-wrap ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 2vw;
+}
+
+.nav-wrap li {
+  line-height: 40.313px;
+}
+
+.nav-wrap li a {
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 300;
+  font-size: 1.68rem;
+  color: white;
+  text-shadow: 0px 2px 1px #000000bd;
+}
+
+.nav-wrap li a:hover {
+  text-shadow: none;
+  color: rgb(224, 224, 37);
+  transition: .5s ease;
+}
+
+.logo-section {
+  width: 9.4792vw;
+  position: absolute;
+  top: 2vw;
+  right: 9vw;
+}
+
+.logo-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Embed Map and Tour Schedule CSS*/
+.tour-section-wrap section {
+  display: block;
+}
+
+.tour-section-row {
+  display: flex;
+  align-items: flex-start;
+  max-width: 85vw;
+  margin: 0 auto;
+  padding-top: 7vw;
+}
+
+.tour-map {
+  position: sticky; 
+  top: 3vh;
+}
+
+.tour-map iframe {
+  width: 30vw;
+  height: 36.7vw;
+  border: 2px solid darkslategray;
+}
+
+.tour-content-wrap {
+  flex-wrap: wrap;
+  width: 60.1458vw;
+  margin-left: 7vw;
+}
+
+.tour-content-wrap p {
+  flex-grow: 1;
+  font-family: JAF-Herb-Condensed;
+  font-size: 10vw;
+  color: white;
+  border-bottom: 0.1042vw solid darkslategray;
+  text-transform: none;
+  font-weight: 300;
+  padding-bottom: 2.3vw;
+}
+
+.accordion {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3.1250vw;
+  padding: 16px 20px 16px 20px;
+  width: 100%;
+  border: 0;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  transform: rotate(0deg);
+  transition: transform .2s ease-in;
+}
+
+.accordion:hover {
+  background-color: black;
+  color: #c5375b;
+  transition: .5s ease-in-out;
+}
+
+.accordion:hover .filter-pink {
+  filter: invert(60%) sepia(95%) saturate(5936%) hue-rotate(324deg) brightness(81%) contrast(89%);
+}
+
+.accordion.active {
+  border-bottom: none;
+}
+
+.accordion.active img {
+  transform: rotate(-180deg);
+  transition: transform .25s ease-in;
+}
+
+.panel {
+  color: white;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3.1250vw;
+  line-height: 3.3854vw;
+  background-color: transparent;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-bottom: 0.1042vw dashed darkslategray;
+}
+
+.accordion-body {
+  padding: 16px 20px 16px 20px;
+}
+
+.tour-panel-row {
+  display: grid;
+  grid-template-columns: .5fr 3fr 1fr;
+  gap: 2vw;
+  grid-template-areas: "date location links";
+  border: none;
+  align-items: center;
+  padding: 5px 0 25px;
+  opacity: 0.5;
+  color: #fff;
+  pointer-events: none;
+}
+
+.tour-panel-date {
+  grid-area: date;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5vw 0;
+  border: 0.1042vw solid darkslategray;
+  text-decoration: line-through;
+}
+
+.tour-date-month {
+  font-size: 2.0833vw;
+  line-height: 2.2396vw;
+}
+
+.tour-date-day {
+  font-size: 2.0833vw;
+  line-height: 2.2396vw;
+}
+
+.tour-panel-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: line-through;
+}
+
+.tour-address {
+  font-size: 2.0833vw;
+  line-height: 2.2396vw;
+}
+
+.tour-panel-ticket {
+  display: inline-block;
+  width: 10.4688vw;
+  height: 5.2604vw;
+  line-height: 5.2604vw;
+  padding: 0;
+  text-align: center;
+  font-family: 'Bebas Neue', cursive;
+  background: black;
+  color: #a73479;
+  margin: 0 auto;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  border: 0.1vw solid darkslategray;
+  cursor: pointer;
+  font-size: 2.0833vw;
+}
+
+/* Responsive Image Gallery CSS */
+.image-gallery-wrap {
+  margin: 6.96vw;
+  margin-top: 3vw;
+  margin-bottom: 2vw;
+}
+
+.image-gallery-wrap section {
+  display: block;
+}
+
+.gallery-title {
+  margin: 5px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 400;
+  font-size: 3.3854vw;
+  color: white;
+  text-align: right;
+}
+
+.gallery-title p {
+  margin: 0;
+  position: relative;
+}
+
+.gallery-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.gallery-column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25;
+  padding: 0 0.3vw;
+}
+
+.gallery-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Footer CSS */
+.menu-footer {
+  text-align: center;
+  margin-top: auto;
+}
+
+.menu-footer a {
+  color: white;
+}
+
+.menu-footer a:link {
+  text-decoration: none; 
+}
+
+.menu-footer a:visited {
+  text-decoration: none; 
+}
+
+.menu-footer a:hover {
+  text-decoration: underline;
+  color: #efc5df;
+  transition: color 0.2s;
+}
+
+.menu-footer a:active {
+  text-decoration: underline; 
+}
+
+.copyright-links {
+  display: block;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  font-size: 0.8vw;
+  height: 20px;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .tour-section-row {
+    flex-wrap: wrap;
+  }
+  
+  .tour-map {
+    position: static;
+  }
+
+  .tour-map iframe {
+    width: 85vw;
+    height: 96vw;
+  }
+
+  .tour-content-wrap {
+    display: flex;
+    width: 85.1vw;
+    margin-left: 0;
+  }
+
+  .tour-content-wrap p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18.7692vw;
+    padding-bottom: 4.3vw;
+  }
+
+  .accordion {
+    font-size: 7.6923vw;
+    line-height: 8.2051vw;
+  }
+
+  .panel {
+    width: 85.1vw;
+  }
+
+  .tour-panel-row {
+    grid-template-columns: 0.5fr 2fr;
+    grid-template-areas:
+        "date location"
+        "date links";
+    align-items: flex-start;
+    text-align: center;
+    padding: 0 0 30px;
+    position: relative;
+    margin-bottom: 10vw !important;
+  }
+
+  .tour-panel-date {
+    width: 19.2vw;
+    padding: 3vw 0;
+  }
+
+  .tour-date-month {
+    font-size: 7.6923vw;
+    line-height: 8.2051vw;
+  }
+  
+  .tour-date-day {
+    font-size: 10.3438vw;
+    line-height: 10.3438vw;
+  }
+
+  .tour-panel-location {
+    font-size: 7.6923vw;
+    line-height: 8.2051vw;
+    grid-auto-flow: column dense;
+  }
+
+  .tour-venue {
+    padding-bottom: 3vw;
+  }
+
+  .tour-address {
+    font-size: 7.6923vw;
+    line-height: 8.2051vw;
+    padding-bottom: 3vw;
+  }
+
+  .tour-panel-ticket {
+    transform: none;
+    position: absolute;
+    bottom: -7.3vw;
+    grid-area: none;
+    font-size: 7.6923vw;
+    border: 0.2564vw solid darkslategray;
+    width: 79.3vw;
+    height: 10vw;
+  }
+
+  .gallery-title {
+    font-size: 8vw;
+    text-align: center;
+  }
+
+  .menu-footer {
+    margin: auto 5.3vw 0 5.3vw;
+  }
+
+  .copyright-links {
+    font-size: 4vw;
+  }
+}

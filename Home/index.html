@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="shortcut icon" type="x-icon" href="../logo-images/icon.png">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Unggoyz</title>
+    
+</head>
+<body>
+
+    <!-- navbar -->
+    <nav class="nav-wrap">
+      <ul>
+        <li class="active">
+          <a href="index.html" title="Unggoyz Home" target="_self"><s>Home</s></a>
+        </li>
+        <li>
+          <a href="../tour.html" title="Unggoyz Tour" target="_self">Tour</a>
+        </li>
+        <li>
+          <a href="../members.html" title="Unggoyz Members" target="_self">Members</a>
+        </li>
+        <li>
+          <a href="../store-index.html" title="Unggoyz Merch" target="_self">Merch</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="logo-section">
+      <img src="../assets/Site-Images/Unggoyz-Logo.svg" alt="Unggoyz Logo">
+    </div>
+      
+      <!-- header image -->
+<div class="unggoy-header">
+
+    <img src="unggoyz.png" alt="Unggoys Header Image" >
+
+</div>
+
+
+    <div id="tv-frame">
+        <div id="antenna"></div>
+        <div id="screen-bezel">
+          <video id="video" src="movie.mp4" controls></video>
+        </div>
+        
+        <div id="buttons">
+          <div id="power-button" class="button" onclick="togglePower()">
+            <p class="button-text">POWER</p>
+          </div>
+          <div id="volume-up-button" class="button" onclick="volumeUp()">
+            <p class="button-text">VOL +</p>
+          </div>
+          <div id="volume-down-button" class="button" onclick="volumeDown()">
+            <p class="button-text">VOL -</p>
+          </div>
+          <div id="change-channel-button" class="button" onclick="changeChannel()">
+            <p class="button-text">CH +</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="menu-footer">
+        <div class="copyright-links">
+          <span>© 2023 Warner Music UK Limited</span>
+          <span>•</span>
+          <span>
+            <a href="https://www.wminewmedia.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+          </span>
+          <span>•</span>
+          <span>
+            <a href="https://www.wminewmedia.com/terms-of-use/" target="_blank" rel="noopener noreferrer">Terms of Use</a>
+          </span>
+          <span>•</span>
+          <span>
+            <a href="https://www.wminewmedia.com/cookies-policy/?ot=6b841fb5-15ba-47fe-890d-a5021d4d038c&url=www.gorillaz.com" target="_blank" rel="noopener noreferrer">Cookies Policy</a>
+          </span>
+          <span>•</span>
+          <span>Cookies Settings</span>
+          <span>•</span>
+          <span>
+            <a href="https://www.youtube.com/watch?v=BBJa32lCaaY" target="_blank">Special Link 4 U</a>
+          </span>
+        </div>
+      </footer>
+      
+      <script src="index.js"></script>
+    
+</body>
+</html>
