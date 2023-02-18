@@ -209,6 +209,11 @@ section strong{
         font-size: 3vw;
         font-family: JAF-Herb-Condensed;
     }
+
+    .menu-footer{
+      position: absolute;
+      bottom: 0;
+    }
     
 }
 
@@ -260,14 +265,4 @@ section strong{
     font-size: 0.8vw;
     height: 20px;
     color: white;
-  }
-  
-  @media only screen and (max-width: 1024px) and (orientation: portrait){
-    .menu-footer {
-      margin: auto 5.3vw 0 5.3vw;
-    }
-  
-    .copyright-links {
-      font-size: 4vw;
-    }
   }
