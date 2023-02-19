@@ -145,10 +145,11 @@ body, html {
   
   @media (max-width: 575px) {
     #tv-frame {
+      
       margin-top: 4rem;
       width: 60%;
       height: 20rem;
-      margin-right: 100px;
+      left: 10%;
       
     }
     
@@ -160,6 +161,17 @@ body, html {
     video {
       width: calc(100% - 10px);
       height: calc(100% - 10px);
+    }
+
+    .menu-footer{
+      /* transform: translate(-30%, 0); */
+      left: auto;
+      position: relative;
+      width: 50%;
+      right: 0;
+    }
+    footer .copyright-links{
+      font-size: 1rem;
     }
     
   }
@@ -231,6 +243,7 @@ body, html {
     }
   
     .copyright-links {
-      font-size: 4vw;
+      font-size: 2.5vw;
+      transform: translate(-30%, 0);
     }
   }
