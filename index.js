@@ -10,11 +10,11 @@ function myFunction() {
 
 // tv design
 let channels = [
-    { src: "movie.mp4", name: "Channel 1" },
-    { src: "movie2.mp4", name: "Channel 2" },
-    { src: "movie3.mp4", name: "Channel 3" }
+    { src: "Home/movie.mp4", name: "Channel 1" },
+    { src: "Home/movie2.mp4", name: "Channel 2" },
+    { src: "Home/movie3.mp4", name: "Channel 3" }
   ];
-  
+
   let currentChannelIndex = 0;
   
   const video = document.getElementById("video");
@@ -28,7 +28,7 @@ let channels = [
       video.pause();
       video.style.display = "none"; 
       document.getElementById("screen-bezel").style.backgroundColor = "#000";
-      var audio = new Audio('close.mp3');
+      var audio = new Audio('Home/close.mp3');
       audio.play();
     }
   }
@@ -52,7 +52,7 @@ let channels = [
     }
     video.src = channels[currentChannelIndex].src;
     video.play();
-    var audio = new Audio('transition.mp3');
+    var audio = new Audio('Home/transition.mp3');
     audio.volume = 0.2;
     audio.play();
   }
@@ -63,8 +63,9 @@ let channels = [
       currentChannelIndex = channels.length - 1;
     }
     video.src = channels[currentChannelIndex].src;
+
     video.play();
-    var audio = new Audio('transition.mp3');
+    var audio = new Audio('Home/transition.mp3');
     audio.volume = 0.2;
     audio.play();
   }
